@@ -23,6 +23,7 @@ MongoClient.connect(uri) // Promises approach.
         // ========================
         // Middlewares
         // ========================
+        //app.use(express.static(__dirname + "/dist/")); // For Heroku deployment.
         app.use(express.json()); // bodyParser now included in Node, but this...
         app.use(express.urlencoded({ extended: true })); // and this needed.
         app.use(cors());
@@ -41,7 +42,7 @@ MongoClient.connect(uri) // Promises approach.
         // Listen
         // ========================
         app.listen((process.env.PORT || 8081), () => {
-            console.log("listening on 8081");
+            console.log(`Server listening on port ${process.env.PORT}`);
         });
     })
     .catch(error => console.log(error))
