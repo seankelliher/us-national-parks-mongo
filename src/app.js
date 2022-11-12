@@ -23,7 +23,7 @@ MongoClient.connect(uri) // Promises approach.
         // ========================
         // Middlewares
         // ========================
-        app.use(express.static(__dirname + "/client/dist/")); // For Heroku deployment.
+        app.use(express.static(__dirname + "/dist/")); // For Heroku deployment.
         app.use(express.json()); // bodyParser now included in Node, but this...
         app.use(express.urlencoded({ extended: true })); // and this needed.
         app.use(cors());
@@ -39,8 +39,7 @@ MongoClient.connect(uri) // Promises approach.
         });
 
         app.get(/.*/, function(req, res) {
-            //res.sendFile(__dirname + "./client/dist/index.html");
-            res.sendFile(path.resolve(__dirname, "dist", "index.html"));
+            res.sendFile(__dirname + "/dist/index.html");
         });
 
         // ========================
