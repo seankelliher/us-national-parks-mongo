@@ -38,6 +38,10 @@ MongoClient.connect(uri) // Promises approach.
                 .catch((error) => console.log(error));
         });
 
+        app.get(/.*/, function(req, res) {
+            res.sendFile(__dirname + "/client/dist/index.html");
+        });
+
         // ========================
         // Listen
         // ========================
