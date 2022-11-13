@@ -24,6 +24,7 @@ MongoClient.connect(uri) // Promises approach.
         // Middlewares
         // ========================
         app.use(express.static(__dirname + "/dist/")); // For Heroku deployment.
+        app.use("/assets", express.static("assets")); //TESTING IMG LOAD FIX.
         app.use(express.json()); // bodyParser now included in Node, but this...
         app.use(express.urlencoded({ extended: true })); // and this needed.
         app.use(cors());
