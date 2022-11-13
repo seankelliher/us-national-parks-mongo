@@ -11,7 +11,7 @@
             @click="listArea = !listArea"
         >
             <img
-                src="../assets/images/open-in-full-icon.svg"
+                src="/images/open-in-full-icon.svg"
                 alt="icon to expand window"
             >
         </figure>
@@ -23,7 +23,7 @@
             @click="listArea = !listArea"
         >
             <img
-                src="../assets/images/close-icon.svg"
+                src="/images/close-icon.svg"
                 alt="icon to close window"
             >
         </figure>

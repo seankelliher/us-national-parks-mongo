@@ -11,7 +11,7 @@
         >
             <img
                 alt="National Parks Service logo"
-                src="../assets/images/national-park-service-logo.svg"
+                src="/images/national-park-service-logo.svg"
             >
         </figure>
     </div>

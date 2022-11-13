@@ -11,7 +11,7 @@
             @click="mapArea = !mapArea"
         >
             <img
-                src="../assets/images/open-in-full-icon.svg"
+                src="/images/open-in-full-icon.svg"
                 alt="icon to expand window"
             >
         </figure>
@@ -23,7 +23,7 @@
             @click="mapArea = !mapArea"
         >
             <img
-                src="../assets/images/close-icon.svg"
+                src="/images/close-icon.svg"
                 alt="icon to close window"
             >
         </figure>
@@ -37,7 +37,7 @@
                 >
                     <img
                         alt="National Parks Service regions map"
-                        src="../assets/images/national-park-service-regions-map.png"
+                        src="/images/national-park-service-regions-map.png"
                     >
                     <figcaption>National Park Service Regions. Map produced by Intermountain Region GIS Program Office, September 2003.</figcaption>
                 </figure>

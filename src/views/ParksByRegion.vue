@@ -46,7 +46,7 @@
 
             <figure class="full">
                 <img
-                    :src="`./src/assets/images/${searchedPark.image}.jpg`"
+                    :src="`/images/${searchedPark.image}.jpg`"
                     :alt="searchedPark.caption"
                 >
                 <figcaption>{{ searchedPark.caption }}</figcaption>
@@ -82,12 +82,12 @@
 
                 <img
                     v-if="getLocalStorage(searchedPark.pid) === true"
-                    src="../assets/images/favorite-icon-yes-fill.svg"
+                    src="/images/favorite-icon-yes-fill.svg"
                     alt="filled icon, user liked this park"
                 >
                 <img
                     v-else
-                    src="../assets/images/favorite-icon-no-fill.svg"
+                    src="/images/favorite-icon-no-fill.svg"
                     alt="empty icon, user did not like this park yet"
                 >
                 </figure>
