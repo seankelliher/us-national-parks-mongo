@@ -1,22 +1,35 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/app.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.20.1",
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "mongodb": "^4.11.0",
-    "morgan": "^1.10.0"
-  },
-  "devDependencies": {
-    "eslint": "^8.27.0"
-  }
+    "name": "us-national-parks-mongo",
+    "private": true,
+    "version": "1.0.0",
+    "type": "commonjs",
+    "description": "Searchable list of US National Parks",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js",
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "author": "Sean Kelliher",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^1.1.3",
+        "body-parser": "^1.20.1",
+        "cors": "^2.8.5",
+        "express": "^4.18.2",
+        "mongodb": "^4.11.0",
+        "morgan": "^1.10.0",
+        "vue": "^3.2.37",
+        "vue-router": "^4.1.6"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^3.1.0",
+        "eslint": "^8.27.0",
+        "eslint-plugin-vue": "^9.7.0",
+        "stylelint": "^14.15.0",
+        "stylelint-config-standard": "^29.0.0",
+        "vite": "^3.1.0"
+    }
 }
