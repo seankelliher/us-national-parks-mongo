@@ -21,11 +21,11 @@ import NavPart from "./components/NavPart.vue";
 import FooterPart from "./components/FooterPart.vue";
 
 export default {
-    name: "Home Page",
+    name: "App",
     components: {
         HeaderPart,
         NavPart,
         FooterPart
-    },
+    }
 };
 </script>
