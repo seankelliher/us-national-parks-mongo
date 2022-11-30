@@ -78,6 +78,7 @@
                 tabindex="0"
                 aria-label="like icon, click to 'like' this park"
                 @click="toggleFavorite(searchedPark)"
+                @keyup.enter="toggleFavorite(searchedPark)"
             >
 
                 <img
@@ -125,22 +126,22 @@ export default {
             searchedParks: [],
             LocStore: "",
             listItems: ["Alaska", "Intermountain", "Midwest", "National Capital", "Northeast", "Pacific West", "Southeast"]
-        }
+        };
     },
     watch: {
         searchTerm:function(val) {
-            this.searchTerm = val
+            this.searchTerm = val;
             if (val.length > 4) {
                 let searchedParks = this.parks.filter((park) =>
                     park.regions.map((region) =>
                         region.substring(0, val.length).toLowerCase()).includes(
-                            val.substring(0, val.length).toLowerCase()
-                        )
+                        val.substring(0, val.length).toLowerCase()
+                    )
                 );
                 this.searchedParks = searchedParks;
             }
         },
-        LocStore:function(newLocStore, oldLocStore) {
+        LocStore:function() {
             this.$forceUpdate(this.searchedParks);
         }
     },
@@ -165,7 +166,7 @@ export default {
         toggleFavorite (parkName) {
             const parkIndex = this.searchedParks.indexOf(parkName);
             const parkPid = this.searchedParks[parkIndex].pid;
-            const favorite = this.searchedParks[parkIndex].favorite;
+            //const favorite = this.searchedParks[parkIndex].favorite;
 
             let status = JSON.parse(localStorage.getItem(parkPid));
             if (status === true) {

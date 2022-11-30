@@ -78,6 +78,7 @@
                 tabindex="0"
                 aria-label="like icon, click to 'like' this park"
                 @click="toggleFavorite(searchedPark)"
+                @keyup.enter="toggleFavorite(searchedPark)"
             >
 
                 <img
@@ -122,11 +123,11 @@ export default {
             searchedParks: [],
             LocStore: "",
             listItems: ["Acadia ", "Arches ", "Badlands ", "Big Bend ", "Biscayne ", "Black Canyon", "Bryce Canyon ", "Canyonlands ", "Capitol Reef ", "Carlsbad Caverns ", "Channel Islands ", "Congaree ", "Crater Lake ", "Cuyahoga Valley ", "Death Valley ", "Denali ", "Dry Tortugas ", "Everglades ", "Gates of the Arctic", "Gateway Arch ", "Glacier Bay", "Glacier ", "Grand Canyon ", "Grand Teton ", "Great Basin ", "Great Sand Dunes", "Great Smoky Mountains ", "Guadalupe Mountains ", "Haleakalā ", "Hawai‘i Volcanoes ", "Hot Springs ", "Indiana Dunes ", "Isle Royale ", "Joshua Tree ", "Katmai", "Kenai Fjords ", "Kobuk Valley ", "Lake Clark", "Lassen Volcanic ", "Mammoth Cave ", "Mesa Verde ", "Mount Rainier ", "American Samoa", "New York Harbor", "New River Gorge", "North Cascades ", "Olympic ", "Petrified Forest ", "Pinnacles ", "Rocky Mountain ", "Saguaro ", "Sequoia & Kings Canyon ", "Shenandoah ", "Theodore Roosevelt ", "Virgin Islands ", "Voyageurs ", "White Sands ", "Wind Cave ", "Wolf Trap", "Wrangell - St. Elias", "Yellowstone ", "Yosemite ", "Zion "]
-        }
+        };
     },
     watch: {
         searchTerm:function(val) {
-            this.searchTerm = val
+            this.searchTerm = val;
             if (val.length > 4) {
                 let searchedParks = this.parks.filter((park) =>
                     park.name.toLowerCase().includes(
@@ -136,7 +137,7 @@ export default {
                 this.searchedParks = searchedParks;
             }
         },
-        LocStore:function(newLocStore, oldLocStore) {
+        LocStore:function() {
             this.$forceUpdate(this.searchedParks);
         }
     },
@@ -161,7 +162,7 @@ export default {
         toggleFavorite (parkName) {
             const parkIndex = this.searchedParks.indexOf(parkName);
             const parkPid = this.searchedParks[parkIndex].pid;
-            const favorite = this.searchedParks[parkIndex].favorite;
+            //const favorite = this.searchedParks[parkIndex].favorite;
 
             let status = JSON.parse(localStorage.getItem(parkPid));
             if (status === true) {

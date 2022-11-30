@@ -78,6 +78,7 @@
                 tabindex="0"
                 aria-label="like icon, click to 'like' this park"
                 @click="toggleFavorite(searchedPark)"
+                @keyup.enter="toggleFavorite(searchedPark)"
             >
 
                 <img
@@ -122,27 +123,27 @@ export default {
             searchedParks: [],
             LocStore: "",
             listItems: ["Alaska", "American Samoa", "Arizona", "Arkansas", "California", "Colorado", "Florida", "Hawaii", "Idaho", "Indiana", "Kentucky", "Maine", "Michigan", "Minnesota", "Missouri", "Montana", "Nevada", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oregon", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Virgin Islands", "Virginia", "Washington", "West Virginia", "Wyoming"]
-        }
+        };
     },
     watch: {
         searchTerm:function(val) {
-            this.searchTerm = val
+            this.searchTerm = val;
             if (val.length > 3) {
                 let searchedParks = this.parks.filter((park) =>
                     park.states.map((state) =>
                         state.substring(0, val.length).toLowerCase()).includes(
-                            val.substring(0, val.length).toLowerCase()
-                        )
+                        val.substring(0, val.length).toLowerCase()
+                    )
                 ); 
                 this.searchedParks = searchedParks;
             }
         },
-        LocStore:function(newLocStore, oldLocStore) {
+        LocStore:function() {
             this.$forceUpdate(this.searchedParks);
         }
     },
     mounted () {
-        this.loadParks()
+        this.loadParks();
     },
     methods: {
         async loadParks () {
@@ -162,7 +163,7 @@ export default {
         toggleFavorite (parkName) {
             const parkIndex = this.searchedParks.indexOf(parkName);
             const parkPid = this.searchedParks[parkIndex].pid;
-            const favorite = this.searchedParks[parkIndex].favorite;
+            //const favorite = this.searchedParks[parkIndex].favorite;
 
             let status = JSON.parse(localStorage.getItem(parkPid));
             if (status === true) {
