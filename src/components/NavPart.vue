@@ -1,20 +1,20 @@
 <template>
     <nav>
-        <button class="nav">
+        <div class="nav-link">
             <router-link to="/parks-by-name">
                 BY NAME
             </router-link>
-        </button>
-        <button class="nav">
+        </div>
+        <div class="nav-link">
             <router-link to="/parks-by-region">
                 BY REGION
             </router-link>
-        </button>
-        <button class="nav">
+        </div>
+        <div class="nav-link">
             <router-link to="/parks-by-state">
                 BY STATE
             </router-link>
-        </button>
+        </div>
     </nav>
 </template>
 

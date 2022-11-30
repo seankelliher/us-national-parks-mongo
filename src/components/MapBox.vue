@@ -9,6 +9,7 @@
             role="button"
             tabindex="0"
             @click="mapArea = !mapArea"
+            @keyup.enter="mapArea = !mapArea"
         >
             <img
                 src="/images/open-in-full-icon.svg"
@@ -21,6 +22,7 @@
             role="button"
             tabindex="0"
             @click="mapArea = !mapArea"
+            @keyup.enter="mapArea = !mapArea"
         >
             <img
                 src="/images/close-icon.svg"

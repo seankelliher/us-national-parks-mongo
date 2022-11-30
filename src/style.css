@@ -204,7 +204,7 @@ input[type="text"] {
     width: 90%;
     margin: 1em 0;
     padding: 0 5% 1em; /* left is 5% */
-    background: #bf5d39; /* medium brown */
+    background: #b95a37; /* medium brown */
     flex: initial; /* flex: 0 1 auto */
 }
 
@@ -295,7 +295,7 @@ input[type="text"] {
     transition: all 1s ease-out;
 }
 
-/* FONT & BUTTON STYLES ARE BELOW */
+/* FONT & "BUTTON" STYLES ARE BELOW */
 h1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.2;
@@ -344,8 +344,8 @@ footer p {
     margin-top: 0;
 }
 
-/* button for nav: By Name, By Region, By State */
-button.nav {
+/* "button" for nav: By Name, By Region, By State */
+.nav-link {
     background: none;
     border: none;
     border-radius: 6px;
@@ -354,13 +354,14 @@ button.nav {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 2;
     font-weight: 600;
+    text-align: center;
 }
 
-/* button for homepage: Search by... */
-button.large {
+/* "button" for homepage: Search by... */
+.homepage-link {
     margin: 1em 0;
     padding: 1em 5%;
-    background: #bf5d39; /* medium brown */
+    background: #b95a37; /* medium brown */
     border: none;
     border-radius: 6px;
     flex: initial; /* flex: 0 1 auto */
@@ -368,6 +369,7 @@ button.large {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 2;
     font-weight: 600;
+    text-align: center;
 }
 
 figcaption {
@@ -392,17 +394,17 @@ footer p a {
     color: #fff;
 }
 
-button.nav a {
+.nav-link a {
     color: #000;
     text-decoration: none;
 }
 
-button.large a {
+.homepage-link a {
     color: #fff;
     text-decoration: none;
 }
 
-button.nav a.router-link-exact-active {
+.nav-link a.router-link-exact-active {
     color: #000;
     text-decoration: underline;
 }
@@ -420,11 +422,11 @@ footer p a:hover {
     text-decoration: underline;
 }
 
-button.nav a:hover {
+.nav-link a:hover {
     text-decoration: underline;
 }
 
-button.large a:hover {
+.homepage-link a:hover {
     text-decoration: underline;
 }
 
@@ -448,12 +450,12 @@ button.large a:hover {
         font-size: 0.875em; /* 14px */
     }
 
-    button.large {
+    .homepage-link {
         width: 80%;
         font-size: 0.9375em; /* 15px */
     }
 
-    button.nav {
+    .nav-link {
         font-size: 0.8125em; /* 13px */
     }
 
@@ -477,12 +479,12 @@ button.large a:hover {
         font-size: 0.9375em; /* 15px */
     }
 
-    button.large {
+    .homepage-link {
         width: 70%;
         font-size: 1em; /* 16px */
     }
 
-    button.nav {
+    .nav-link {
         font-size: 0.875em; /* 14px */
     }
 
@@ -506,12 +508,12 @@ button.large a:hover {
         font-size: 1em; /* 16px */
     }
 
-    button.large {
+    .homepage-link {
         width: 60%;
         font-size: 1.1em; /* 17.6px */
     }
 
-    button.nav {
+    .nav-link {
         font-size: 0.875em; /* 14px */
     }
 
@@ -535,11 +537,11 @@ button.large a:hover {
         font-size: 1.1em; /* 17.6px */
     }
 
-    button.large {
+    .homepage-link {
         font-size: 1.2em; /* 19.2px */
     }
 
-    button.nav {
+    .nav-link {
         font-size: 1em; /* 16px */
     }
 

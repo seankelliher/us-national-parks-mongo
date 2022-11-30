@@ -6,23 +6,23 @@
         />
 
         <div class="home-page">
-            <button class="large">
+            <div class="homepage-link">
                 <router-link to="/parks-by-name">
                     Search Parks by Name
                 </router-link>
-            </button>
+            </div>
 
-            <button class="large">
+            <div class="homepage-link">
                 <router-link to="/parks-by-region">
                     Search Parks by Region
                 </router-link>
-            </button>
+            </div>
 
-            <button class="large">
+            <div class="homepage-link">
                 <router-link to="/parks-by-state">
                     Search Parks by State
                 </router-link>
-            </button>
+            </div>
         </div>
     </section>
 </template>
