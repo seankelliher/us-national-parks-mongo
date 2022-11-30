@@ -97,11 +97,11 @@ figure.favorite {
     flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between; /* main axis */
+    justify-content: flex-start; /* main axis */
     align-items: flex-start; /* cross axis */
 }
 
-figure.favorite:hover {
+figure.favorite img:hover {
     cursor: pointer;
 }
 
